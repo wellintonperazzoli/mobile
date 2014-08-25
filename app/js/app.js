@@ -12,5 +12,6 @@ angular.module('myApp', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
   $routeProvider.when('/teste', {templateUrl: 'partials/teste.html', controller: 'TesteCtrl'});
+  $routeProvider.when('/teste2', {templateUrl: 'partials/teste2.html', controller: 'TesteCtrl'});
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
