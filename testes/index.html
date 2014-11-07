@@ -1,0 +1,38 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="style.css" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="ListaPedidos">
+        <div class="container" ng-controller="ListaCtrl" style="padding-top: 50px;">
+            <div class="row box-pedidos">
+                <div class="col-xs-8 bhoechie-tab">
+                    <!-- flight section -->
+                    <div class="bhoechie-tab-content" ng-repeat="pedido in pedidos">
+                        <h3 style="margin-top: 0;color:#006cb4">Pedido solicitado por {{pedido.Nome}}</h3>
+                        <hr>
+                        <p>Endereço para entrega: <b> {{pedido.Endereco}} </b></p>
+                        <p>Pedido: <b>{{pedido.Pedido}}</b></p>
+                    </div>
+                </div>
+                <div class="col-xs-4 bhoechie-tab-menu">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item text-left" ng-repeat="pedido in pedidos">
+                            <b>Nome:</b> {{pedido.Nome}}
+                            <p><b>Endereço:</b> {{pedido.Endereco}}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>
